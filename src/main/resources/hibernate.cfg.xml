@@ -1,14 +1,37 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-configuration PUBLIC
 
-<taglib xmlns="http://java.sun.com/xml/ns/javaee"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
-        version="2.1">
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 
-    <tlib-version>1.0</tlib-version>
-    <short-name>myshortname</short-name>
-    <uri>http://mycompany.com</uri>
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
-    <!-- Invoke 'Generate' action to add tags or functions -->
+<hibernate-configuration>
 
-</taglib>
+    <session-factory>
+
+        <!-- JDBC Database connection settings -->
+
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+
+        <property name="connection.url">jdbc:postgresql://localhost:5433/postgres</property>
+
+        <property name="connection.username">postgres</property>
+
+        <property name="connection.password">xxx</property>
+
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+
+
+        <!-- Select our SQL dialect -->
+
+        <property name="dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+
+        <!-- Echo the SQL to stdout -->
+
+        <property name="show_sql">true</property>
+
+        <!-- Set the current session context -->
+
+
+    </session-factory>
+
+</hibernate-configuration>
